@@ -30,6 +30,20 @@
         pase_dos_dias.addEventListener('change', mostrarDias);
         pase_completo.addEventListener('change', mostrarDias);
 
+        nombre.addEventListener('blur', validarInput);
+        apellido.addEventListener('blur', validarInput);
+        email.addEventListener('blur', validarInput);
+
+        function validarInput(){
+            if(this.value == ''){
+                this.style.boxShadow = '0px 0px 5px 0px rgba(255,18,18,1)';
+                this.placeholder = 'Rellena este campo!';
+            }
+            else{
+                this.style.boxShadow = '0px 0px 5px 0px rgba(88,255,76,1)';
+            }
+        }
+
         function calcularMontos(event){
             event.preventDefault(); //evitar tomar el primer valor
             if(regalo.value === ''){

@@ -621,6 +621,27 @@ p.copyright{
 
 /* ------------------ RESERVACIONES ------------------ */
 
+.datos_usuario{
+    margin-left: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 13px;
+    padding: 10px;
+    background: rgb(245, 245, 245);
+    box-shadow: 0px 0px 10px -2px rgba(158,158,158,0.83);
+}
+
+.datos_usuario::placeholder{
+    color: rgb(216, 216, 216);
+    font-weight: bold;
+}
+
+.datos_usuario:focus{
+    outline: none;
+    box-shadow: 0px 0px 16px -2px rgba(134, 134, 134, 0.83);
+}
+
 .registro h3{
     text-align: center;
     text-transform: uppercase;
@@ -758,7 +779,6 @@ h4{
     font-size: 2em;
     color: #fe4918;
 }
-
 
 
 @media only screen and (min-width:480px){
