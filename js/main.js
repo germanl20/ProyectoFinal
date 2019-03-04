@@ -3,6 +3,20 @@
 
     var regalo = document.getElementById('regalo');
     document.addEventListener('DOMContentLoaded', function(){
+        //MAPA LEAFLET
+        var map = L.map('mapa').setView([-35.279970, -57.229264], 17); //se agregan las coordenadas en los corchetes / el otro numero es el zoom
+
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+
+        L.marker([-35.279970, -57.229264]).addTo(map)
+            .bindPopup('LASOL UNDAV <br> Boletos disponibles <br> <a href="https://goo.gl/maps/Js699LZcGDE2" target="_blank">VER EN GOOGLE MAPS</a>')
+            .openPopup();
+            
+            /* .bindTooltip('Otro tipo de mensaje al hacer hover')
+            .openTooltip();
+            */
         
         //DATOS USUARIO
         var nombre = document.getElementById('nombre');
@@ -33,14 +47,24 @@
         nombre.addEventListener('blur', validarInput);
         apellido.addEventListener('blur', validarInput);
         email.addEventListener('blur', validarInput);
+        email.addEventListener('blur', validarMail);
 
         function validarInput(){
             if(this.value == ''){
                 this.style.boxShadow = '0px 0px 5px 0px rgba(255,18,18,1)';
                 this.placeholder = 'Rellena este campo!';
-            }
-            else{
+            }else{
                 this.style.boxShadow = '0px 0px 5px 0px rgba(88,255,76,1)';
+            }
+        }
+
+        function validarMail(){
+            if(this.value.indexOf('@') > -1){
+                //INDEXOF nos devuelve si la cadena tiene ese caracter o palabra, en ese caso devuelve algo mayor a -1, si no esta devuelve -1
+                this.style.boxShadow = '0px 0px 5px 0px rgba(88,255,76,1)';
+            }else{
+                this.style.boxShadow = '0px 0px 5px 0px rgba(255,18,18,1)';
+                this.placeholder = 'Correo incorrecto';
             }
         }
 

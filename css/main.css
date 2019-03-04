@@ -442,7 +442,7 @@ ul{
 }
 .lista-precios > li:nth-child(2) .tabla-precio{
     padding: 60px 0;
-    border: 1px solid #fe4918;
+    border: 1px solid #e1e1e1;;
 }
 .tabla-precio{
     border: 1px solid #e1e1e1;
@@ -453,7 +453,6 @@ ul{
 }
 .tabla-precio:hover{
     transform: scale(1.1);
-    border: 1px solid #fe4918;
     box-shadow: 0px 0px 30px rgb(173, 173, 173);
 }
 .tabla-precio h3{
@@ -484,7 +483,6 @@ ul{
 
 .mapa{
     height: 420px;
-    background-color: green;
 }
 
 /* ----------- TESTIMONIALES ------------ */
@@ -684,7 +682,7 @@ h4{
     border: none;
 }
 
-.lista-precios > li:nth-child(2) .tabla-precio{
+.precios-registro > li:nth-child(2) .tabla-precio{
     border: none;
 }
 
