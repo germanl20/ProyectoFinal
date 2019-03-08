@@ -10,7 +10,7 @@ $(function(){
     $('.contenedor .logo'); // SELECCIONO COMO EN CSS TAMBIEN DE LA CLASE CONTENEDOR, LA CLASE LOGO
     $('main article:first'); // SELECCIONO EL PRIMER ARTICLE DEL ARRAY
     $('main article:last'); // SELECCIONO EL ULTIMO ARTICLE DEL ARRAY
-    $('main article:last').hide(); // OCULTO COMO SI FUERA DISPLAY = "NONE"
+    $('main article:last')/*.hide();*/ // OCULTO COMO SI FUERA DISPLAY = "NONE"
     $('main article:first').remove(); // BORRO EL ELEMENTO DEL DOM
 
     var copia = $('main article:last').clone(); // CLONO O DUPLICO UN ELEMENTO
@@ -56,7 +56,7 @@ $(function(){
 
     $('#navegacion nav ul li a').on('click', function(e){
         $('#navegacion nav ul li a').removeClass('activo');
-        e.preventDefault();
+        //e.preventDefault(); previene la accion por defecto
         $(this).addClass('activo');
     });
 
@@ -78,4 +78,31 @@ $(function(){
     $('main article:first h2').text(); // DEVUELVE EL TEXTO
     $('main article:first h2').text('hola'); // MODIFICO EL TEXTO
     $('main article h2').html('<h1>LONDRES</H1>'); // MODIFICO EL TEXTO Y PUEDO DARLE FORMATO HTML
+
+    // CAMBIAR ATRIBUTOS
+
+    $('.navegacion ul li:first a').attr('href'); // DEVUELVE EL VALOR DEL ATRIBUTO
+    $('.navegacion ul li:first a').attr('href', 'http://www.eltilin.ga'); // MODIFICO EL VALOR DEL ATRIBUTO
+    $('.navegacion ul li:first a').attr('target', '_blank');
+    $('article:first img').attr('src', 'img/imagen_1.jpg');
+
+    $('article:first img').on('click', function(){
+        $(this).attr('src', 'img/imagen_2.jpg');
+    });
+
+    // MANIPULAR CSS (AUNQUE SIEMPRE ES MEJOR HACERLO CON CSS)
+
+    $('.logo img').css({'width':'400px'});
+    $('main article h2').css({'color':'#db008d'})
+    $('aside').css({
+        'background-color':'#e1e1e1',
+        'text-transform':'uppercase',
+        'padding':'20px'
+    });
+
+    $('aside').on('mouseenter', cambiarFondo);
+
+    function cambiarFondo(){
+        $('.navegacion').css('background-color', 'red'); // ACA NO USE LLAVE ENTONCES SE SEPARA POR COMA
+    }
 });
