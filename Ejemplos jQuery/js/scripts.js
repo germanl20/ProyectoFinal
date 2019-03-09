@@ -105,4 +105,37 @@ $(function(){
     function cambiarFondo(){
         $('.navegacion').css('background-color', 'red'); // ACA NO USE LLAVE ENTONCES SE SEPARA POR COMA
     }
+
+    // ANIMACIONES
+
+    $('.logo img').on('click', function(){
+        $(this).animate({'width':'200px'}, 500); // PRIMER PARAMETRO LO QUE VA A HACER LA ANIMACION, EL SEGUNDO ES LA DURACION EN MILISEGUNDOS
+    });
+
+    $('aside ul li:first a').click(function(){ // OTRA FORMA DE REALIZAR EL EVENTO CLICK
+        $('main article:first').slideUp(1000);
+    });
+
+    $('footer').click(function(){ // OTRA FORMA DE REALIZAR EL EVENTO CLICK
+        $('main article:first').slideDown(1000);
+    });
+
+    // FOR EACH Y ARRAYS
+
+    var proximosViajes = ['Londres', 'Paris', 'Punta Indio', 'Nueva York'];
+    $.each(proximosViajes, function(indice, valor){ // RECORRE EL ARREGLO, ES EL FOR EACH
+        if(indice == 0) $('aside').append('<h2> Proximos viajes </h2>');
+        $('aside').append('<li>' + valor + '</li>');
+    });
+
+    var viajesPorFechas = {
+        primero: 'Londres',
+        segundo: 'Barcelona',
+        tercero: 'Punta Indio',
+        cuarto: 'Paris'
+    };
+    $.each(viajesPorFechas, function(indice, valor){ // EL INDICE ES LA VARIABLE EJ PRIMERO
+        $('aside').append('<li>' + indice + ' - ' + valor + '</li>');
+    });
+
 });
