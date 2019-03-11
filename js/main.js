@@ -126,3 +126,16 @@
 
     }); // DOM CONTENT LOADED
 })();
+
+$(function(){
+    //PROGRAMA DE CONFERENCIAS
+    $('.menu-programa a').on('click',function(){
+        $('.info-curso').hide();
+        $('.menu-programa a').removeClass('activo');
+        $(this).addClass('activo');
+        var enlace = $(this).attr('href');
+        $(enlace).fadeIn(1000);
+        return false;
+    });
+
+});

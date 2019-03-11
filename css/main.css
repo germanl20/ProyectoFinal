@@ -288,6 +288,9 @@ ul{
 
 /* ----------- PROGRAMA DEL EVENTO ------------ */
 
+.ocultar{
+    display: none;
+}
 .programa{
     position: relative;
 }
@@ -310,7 +313,6 @@ ul{
 .menu-programa{
     width: 100%;
     border-bottom: 1px solid #fe4918;
-    padding-bottom: 10px;
 }
 .menu-programa a{
     display: block;
@@ -319,8 +321,23 @@ ul{
     text-decoration: none;
     font-family: 'Oswald', sans-serif;
     margin-bottom: 10px;
+    padding-bottom: 10px;
     font-weight: bold;
     font-size: 1.2em;
+    position: relative;
+}
+.menu-programa a.activo::after{
+    position: absolute;
+    content: '';
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    height: 20px;
+    width: 30px;
+    background-image: url(../img/talleres-flecha.jpg);
+    background-repeat: no-repeat;
+    background-position: top center;
+    bottom: -30px;
 }
 .menu-programa.flex{
     display: block;
