@@ -128,6 +128,10 @@
 })();
 
 $(function(){
+
+    //LETTERING
+    $('.nombre-sitio').lettering();
+
     //PROGRAMA DE CONFERENCIAS
     $('.menu-programa a').on('click',function(){
         $('.info-curso').hide();
@@ -151,4 +155,7 @@ $(function(){
         $('#minutos').html(event.strftime('%M'));
         $('#segundos').html(event.strftime('%S'));
     });
+
+    //MODIFICACION DE TIPOGRAFIA HEADER
+
 });
