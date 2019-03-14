@@ -242,6 +242,14 @@ ul{
 }
 
 /* ----------- BARRA DE NAVEGACION ------------ */
+
+.fixed{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 2000;
+}
 .barra{
     background-color: #353535;
     padding: 15px 0;
@@ -258,6 +266,7 @@ ul{
 }
 .navegacion-principal{
     width: 100%;
+    display: none;
 }
 .navegacion-principal a{
     font-family: 'Oswald', sans-serif;
@@ -799,6 +808,15 @@ h4{
 #suma-total{
     font-size: 2em;
     color: #fe4918;
+}
+
+/* ------------------ CONFERENCIA ------------------ */
+.conferencia .navegacion-principal .activo{
+    border-bottom: 3px solid #fe4918;
+}
+.galeria a{
+    display: inline-block;
+    margin-bottom: 5px;
 }
 
 

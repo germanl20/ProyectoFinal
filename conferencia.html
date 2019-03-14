@@ -19,7 +19,7 @@
   <meta name="theme-color" content="#fafafa">
 </head>
 
-<body>
+<body class="conferencia">
   <!--[if lte IE 9]>
     <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
   <![endif]-->
@@ -57,7 +57,7 @@
         </div>
   
         <nav class="navegacion-principal">
-          <a href="#">conferencia</a>
+          <a href="#" class="activo">conferencia</a>
           <a href="#">Calendario</a>
           <a href="#">Invitados</a>
           <a href="registro.html">Reservaciones</a>
@@ -70,9 +70,40 @@
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae nemo voluptatem tempora officia in sequi dolor corporis ad, repellat, ipsum alias eum. Obcaecati nobis aut, tenetur quam sequi sed quod.</p>
   </section>
 
-  <section class="seccion">
+  <section class="seccion contenedor">
     <h2>GALERÍA DE FOTOS</h2>
-
+    <div class="galeria">
+      <a href="img/galeria/01.jpg" data-lightbox="galeria">
+        <img src="img/galeria/thumbs/01.jpg" alt="imagen 1">
+      </a>
+      <a href="img/galeria/02.jpg" data-lightbox="galeria">
+        <img src="img/galeria/thumbs/02.jpg" alt="imagen 1">
+      </a>
+      <a href="img/galeria/03.jpg" data-lightbox="galeria">
+        <img src="img/galeria/thumbs/03.jpg" alt="imagen 1">
+      </a>
+      <a href="img/galeria/04.jpg" data-lightbox="galeria">
+        <img src="img/galeria/thumbs/04.jpg" alt="imagen 1">
+      </a>
+      <a href="img/galeria/05.jpg" data-lightbox="galeria">
+        <img src="img/galeria/thumbs/05.jpg" alt="imagen 1">
+      </a>
+      <a href="img/galeria/06.jpg" data-lightbox="galeria">
+        <img src="img/galeria/thumbs/06.jpg" alt="imagen 1">
+      </a>
+      <a href="img/galeria/07.jpg" data-lightbox="galeria">
+        <img src="img/galeria/thumbs/07.jpg" alt="imagen 1">
+      </a>
+      <a href="img/galeria/08.jpg" data-lightbox="galeria">
+        <img src="img/galeria/thumbs/08.jpg" alt="imagen 1">
+      </a>
+      <a href="img/galeria/09.jpg" data-lightbox="galeria">
+        <img src="img/galeria/thumbs/09.jpg" alt="imagen 1">
+      </a>
+      <a href="img/galeria/10.jpg" data-lightbox="galeria">
+        <img src="img/galeria/thumbs/10.jpg" alt="imagen 1">
+      </a>
+    </div>
 
   </section>
 
@@ -113,6 +144,12 @@
   <script src="js/mapa.js"></script>
   <!-- JQUERY -->
   <script src="js/jquery-3.3.1.min.js"></script>
+  <!-- MAPA LEAFLET -->
+  <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"></script>
+  <!-- ANIMACION NUMEROS -->
+  <script src="js/animarNumeros/jquery.animateNumber.min.js"></script>
+  <!-- ANIMACION CONTADOR -->
+  <script src="js/AnimarContador/jquery.countdown.min.js"></script>
   <!-- ANIMACION CONTADOR -->
   <script src="js/Lettering/jquery.lettering.js"></script>
   <!-- LIGHTBOX -->

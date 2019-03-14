@@ -25,6 +25,7 @@
         var etiquetas = document.getElementById('etiquetas');
         var camisas = document.getElementById('camisa_evento');
 
+    if(document.getElementById('calcular')){
         calcular.addEventListener('click', calcularMontos);
         pase_dia.addEventListener('change', mostrarDias);
         pase_dos_dias.addEventListener('change', mostrarDias);
@@ -124,10 +125,25 @@
             document.getElementById(id).style.display = "none";
         }
 
+    }
     }); // DOM CONTENT LOADED
 })();
 
 $(function(){
+
+    var windowHeight = $(window).height();  // DEVUELVE LA ALTURA DE LA VENTANA DEL NAVEGADOR
+    var barraHeight = $('.barra').innerHeight();
+
+    $(window).scroll(function(){ // EVENTO SCROLL 
+        var cantScroll = $(window).scrollTop(); // DEVUELVE LA CANTIDAD DE PIXELES QUE BAJE CUANDO HICE SCROLL
+        if(cantScroll > windowHeight){
+            $('.barra').addClass('fixed');
+            $('body').css({'margin-top': barraHeight + 'px'});
+        }else{
+            $('.barra').removeClass('fixed');
+            $('body').css({'margin-top': '0px'});
+        }
+    });
 
     //LETTERING
     $('.nombre-sitio').lettering();
@@ -156,6 +172,9 @@ $(function(){
         $('#segundos').html(event.strftime('%S'));
     });
 
-    //MODIFICACION DE TIPOGRAFIA HEADER
+    //MENU MOVIL
+    $('.menu-movil').on('click', function(){
+        $('.navegacion-principal').slideToggle();
+    });
 
 });
